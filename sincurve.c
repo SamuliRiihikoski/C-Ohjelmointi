@@ -49,7 +49,7 @@
 #define PII 3.14        // 2*PII is 360 degrees
 #define AMPLITUDE 10    // amplitude for sin curve
 
-#define RESOLUTION 0.1  // how accurate sin curve is calculated 
+#define CURVE_RESOLUTION 0.1  // how accurate sin curve is calculated 
                         // 1 = low accurate
                         // 0.1 = normal accurate
                         // 0.01 = high accurate
@@ -138,7 +138,7 @@ void draw_axis() {
 
 void draw_sin() {
 
-    for(float curr_x = 0; curr_x <= AXIS_SIZE; curr_x += RESOLUTION) {
+    for(float curr_x = 0; curr_x <= AXIS_SIZE; curr_x += CURVE_RESOLUTION) {
 
         move(scale_sin(curr_x),curr_x+1);
         printw("O",curr_x);
