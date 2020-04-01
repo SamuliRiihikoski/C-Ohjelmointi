@@ -1,5 +1,5 @@
 /***************************************************************************
- *   Copyright (C) $Year$ by $Samuli Riihikoski$   *
+ *   Copyright (C) $2020$ by $Samuli Riihikoski$   *
  *   $samuli.riihi@gmail.com$   *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
