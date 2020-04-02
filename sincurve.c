@@ -45,15 +45,15 @@
 
 /* Global constants */
 
-#define AXIS_SIZE 40    // total range for x and y axis
-#define PII 3.14        // 2*PII is 360 degrees
-#define AMPLITUDE 10    // amplitude for sin curve
-#define ROUNDUP 0.5     // round float number
+#define AXIS_SIZE 40            // total range for x and y axis
+#define PII 3.14                // 2*PII is 360 degrees
+#define AMPLITUDE 10            // amplitude for sin curve
+#define ROUNDUP 0.5             // needed value to round float number into correct int values
 
-#define CURVE_RESOLUTION 0.1  // how accurate sin curve is calculated 
-                        // 1 = low accurate
-                        // 0.1 = normal accurate
-                        // 0.01 = high accurate
+#define CURVE_RESOLUTION 0.1    // how accurate sin curve is calculated 
+                                // 1 = low accurate
+                                // 0.1 = normal accurate
+                                // 0.01 = high accurate
 
 
 /*-------------------------------------------------------------------*
