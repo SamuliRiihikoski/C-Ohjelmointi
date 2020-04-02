@@ -162,7 +162,6 @@ void draw_temps(Databank *TempData) {
     for(int curr_x = 0; curr_x < X_AXIS_SIZE; curr_x++) {
         
         int y_bar = calc_y_bar(curr_x, TempData);
-        
         attron(COLOR_PAIR(2));
 
         for(int i=y_bar; i<Y_AXIS_SIZE; i++) {
@@ -172,7 +171,6 @@ void draw_temps(Databank *TempData) {
         }
         
         attroff(COLOR_PAIR(2));
-       
         usleep(0);
 
     }
