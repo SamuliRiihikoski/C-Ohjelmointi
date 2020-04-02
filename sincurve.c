@@ -48,6 +48,7 @@
 #define AXIS_SIZE 40    // total range for x and y axis
 #define PII 3.14        // 2*PII is 360 degrees
 #define AMPLITUDE 10    // amplitude for sin curve
+#define ROUNDUP 0.5     // round float number
 
 #define CURVE_RESOLUTION 0.1  // how accurate sin curve is calculated 
                         // 1 = low accurate
@@ -140,7 +141,7 @@ void draw_sin() {
 
     for(float curr_x = 0; curr_x <= AXIS_SIZE; curr_x += CURVE_RESOLUTION) {
 
-        move(scale_sin(curr_x),curr_x+1);
+        move(scale_sin(curr_x),curr_x);
         printw("O",curr_x);
        
         usleep(0);
@@ -165,8 +166,16 @@ void draw_sin() {
 
 int scale_sin(float value) {
 
+    float float_result;
+    int int_result;
+
     value = (value/AXIS_SIZE)*(2*PII)-PII;
-    int result = (int)((-sin(value)*AMPLITUDE)+AXIS_SIZE/2);
+    float_result = ((-sin(value)*AMPLITUDE)+AXIS_SIZE/2);
+
+    if(float_result >= 0)
+        int_result = (int)(float_result + ROUNDUP);
+    else
+        int_result = (int)(float_result - ROUNDUP);
     
-    return result;
+    return int_result;
 }
